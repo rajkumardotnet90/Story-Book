@@ -1,0 +1,32 @@
+.p-component {
+  font-size: 0.75rem;
+}
+
+.p-rating {
+  display: inline-flex;
+}
+
+.p-datatable-table {
+  width: 100%;
+  border-spacing: unset;
+}
+
+.p-column-header-content {
+  display: flex;
+}
+
+.p-toast-message-content {
+  display: flex;
+}
+
+.p-toast .p-toast-message.p-toast-message-info {
+  width: 40%;
+  position: absolute;
+  right: 2%;
+}
+
+.p-toast-icon-close {
+  border: none;
+  position: fixed;
+  right: 2%; 
+}

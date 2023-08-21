@@ -3,29 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.2.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
     "chromatic": "^6.14.0",
     "postcss": "^8.4.20",
-    "primeicons": "^6.0.1",
     "primeflex": "^3.3.0",
+    "primeicons": "^6.0.1",
     "primereact": "^9.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-ellipsis-text": "^1.2.1",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.5.0",
-    "react-ellipsis-text": "^1.2.1"
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts build:tailwind --parallel watch:tailwind start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:tailwind": "tailwind build -i src/tailwind.css -o src/tailwind.output.css",
+    "watch:tailwind": "chokidar 'src/**/*.css' 'src/**/*.scss' --ignore src/tailwind.output.css -c npm-run-all build:tailwind"
   },
   "eslintConfig": {
     "extends": [
@@ -57,10 +60,12 @@
     "@storybook/react": "^7.3.1",
     "@storybook/react-webpack5": "^7.3.1",
     "@storybook/testing-library": "^0.2.0",
+    "@tailwindcss/postcss7-compat": "^2.1.0",
     "babel-plugin-named-exports-order": "^0.0.2",
     "eslint-plugin-storybook": "^0.6.13",
     "prop-types": "^15.8.1",
     "storybook": "^7.3.1",
+    "tailwindcss": "^2.2.19",
     "webpack": "^5.88.2"
   }
 }

@@ -68,18 +68,18 @@ export const DataTableBasic = ({ allColumn, columns }) => {
             sortMessages(data, column.accessor);
         } else if (column.accessor === 'checkbox') {
             console.log("handleOnClick", column);
-            column.isChecked = !column.isChecked;
-            let colData = cloneDeep(columns);
-            colData.map(item => {if (column.accessor === 'checkbox') item.isChecked = !item.isChecked});
-            setColumnData(colData);
-            console.log("columnData", columnData)
-            if (column.isChecked) {
-                let selectedProducts = cloneDeep(data);
-                selectedProducts.map(item => item.checked =!item.checked);
-                setSelectedProducts(selectedProducts);
-            } else {
-                setSelectedProducts([]);
-            }
+            // column.isChecked = !column.isChecked;
+            // let colData = cloneDeep(columns);
+            // colData.map(item => {if (column.accessor === 'checkbox') item.isChecked = !item.isChecked});
+            // setColumnData(colData);
+            // console.log("columnData", columnData)
+            // if (column.isChecked) {
+            //     let selectedProducts = cloneDeep(data);
+            //     selectedProducts.map(item => item.checked =!item.checked);
+            //     setSelectedProducts(selectedProducts);
+            // } else {
+            //     setSelectedProducts([]);
+            // }
             console.log("selectedProducts", selectedProducts);
         }
     };

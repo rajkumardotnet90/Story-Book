@@ -87,8 +87,8 @@ export const DataTableBasic = ({ allColumn, columns }) => {
     const onProductSelect = (value, checked) => {
         console.log("onProductSelect", value, checked);
         // setProducts({...products, isChecked: products.name === value.name ? checked : products.isChecked })
-        let selectedProduct = products.forEach(prod => { if (prod.name === value.name) prod.isChecked = checked });
-        setProducts(selectedProduct);
+        // let selectedProduct = products.forEach(prod => { if (prod.name === value.name) prod.isChecked = checked });
+        // setProducts(selectedProduct);
         // if (checked) {
         //     setSelectedProducts([...selectedProducts, value]);
         // } else {
